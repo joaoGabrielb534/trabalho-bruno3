@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     height: 35,
     marginTop: "6%",
     borderRadius: 11,
-    paddingLeft: 20
+    paddingLeft: 20,
+    backgroundColor: "#FFB933"
   },
   botao:{
     borderWidth: 1,
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
     paddingRight: "7%",    
     padding: 5,
     borderRadius: 11,
-    marginTop: "6%"
+    marginTop: "6%",
+    backgroundColor: "#FFB933"
   }
 });

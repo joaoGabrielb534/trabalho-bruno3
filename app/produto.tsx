@@ -1,7 +1,7 @@
 import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
+import { ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, Alert } from 'react-native';
 import { House, UserCircle, ShoppingCartSimple, SignOut } from "phosphor-react-native"
 
 
@@ -9,6 +9,9 @@ import { House, UserCircle, ShoppingCartSimple, SignOut } from "phosphor-react-n
 export default function Login() {
   const [cpf, setcpf] = useState()
   const [senha, setsenha] = useState()
+  const adicionaraocarrinho = () => {
+    Alert.alert("Item adicionado");
+  };
   return (
     <View style={styles.container}>
       <View style={styles.barra}>
@@ -64,8 +67,8 @@ export default function Login() {
 
 
         <View>
-          <TouchableOpacity style={styles.botao}>
-            <Link href={"carrinho"}>Adicionar ao carrinho</Link>
+        <TouchableOpacity onPress={adicionaraocarrinho}>
+            <Text style={styles.botao}>Adicionar ao carrinho</Text>
           </TouchableOpacity>
 
         </View>
